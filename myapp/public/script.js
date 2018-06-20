@@ -3,9 +3,8 @@ $.ajax({
     url: "http://localhost:3291/database",
     // dataType: "json",
     success: function (datas) {
-        
-   //  var donnees = JSON.parse(datas);
-    //  var donnee=JSON.stringify(datas)
+        // to do : ajout d'une boucle pour le cas d'ajout de donné dans la base de donné
+ 
 console.log(datas)
 
  

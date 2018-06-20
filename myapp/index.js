@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
 
            dbo.collection("personnages").find().toArray(function (err, result) {
                if (err) throw err;           
-             
+             // envoie le résultat de ce qu'il y a dans la collection "personnages" 
                 res.send(result);
             
                 db.close();
