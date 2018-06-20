@@ -9,8 +9,8 @@ $.ajax({
 console.log(datas)
 
  
-        $("div").append( "<p> affiche ici :"+datas[0].name+"</p>" )
-  
+        $("#donnee").append( "<p class='lead'> Prénom : "+datas[0].name+" </p>" )
+        $("#donnee").append( "<p class='lead'> Genre: "+datas[0].genre+"</p>" )
     
 
    

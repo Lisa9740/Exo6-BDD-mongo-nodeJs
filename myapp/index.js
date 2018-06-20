@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 });
 
  app.get('/database', function (req, res) {
-
+//récupération de la base de donnée 'alison' 
     MongoClient.connect("mongodb://127.0.0.1:27017/alison", function (error, db) {
         if (error) {
             throw error;
