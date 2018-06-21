@@ -12,17 +12,19 @@
   <body>
     <header class="bg-dark text-white text-center p-5">    <h1> Mongo DB</h1> </header>
    <div class="container border border-dark mt-5">
-     <h1> Affichage des données de la base de donnée 'alison' avec MongoDB</h1>
+     <h2> Modification des données de la base de donnée 'alison' avec MongoDB</h2>
       <div id="donnee"></div>
     </div>
 
     <div class="container mx-auto mt-3">
       <form> 
-        <input type="text" class="form-control"  placeholder="entrez votre nom">
-        <input type="text" class="form-control"  placeholder="entrez votre genre">
-        <button class="btn btn-primary" id="submit"> Submit </button>
+          <input type="text" class="form-control"  placeholder="entrez le nom a modifier" id="prenom2">
+        
+        <input type="text" class="form-control"  placeholder="entrez la modification" id="prenommodif">
+        
+        <button class="btn btn-primary mt-3" id="submitmodif"> Submit </button>
       </form>
-     
+      <a href="http://localhost:3291/"> <button class="btn btn-danger mt-3"> Retourner a la liste </button></a>
 <div id="rajout"></div>
     </div>
     <!-- Optional JavaScript -->

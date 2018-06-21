@@ -13,6 +13,10 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 
 });
+app.get('/modifier', function (req, res) {
+    res.sendFile(__dirname + '/editionbdd.html');
+
+});
 
  app.get('/database', function (req, res) {
 //récupération de la base de donnée 'alison' 
@@ -69,7 +73,41 @@ app.post('/addition', function(req, res) {
   
 })
   
+//test
+app.post('/personne', function(req, res) {
+    var name = req.body.name;
+    var modifname = req.body.modifname; 
+    // var name1 = modifName
+    // console.log(modifName) 
 
+    
+    MongoClient.connect("mongodb://127.0.0.1:27017/alison", function (error, db) {
+        if (error) {
+            throw error;
+
+        } else {
+            console.log("Connecté à la base de données 'alison'");
+            var dbo = db.db("alison");
+
+       
+  
+
+        dbo.collection("personnages").update( {"name" : name },
+         {$set: { "name":modifname  } }),function (err, result) {
+               if (err) throw err;           
+         
+           
+             res.send(result);
+            
+                db.close();
+           
+            }
+    
+    }
+});
+  
+})
+  
  
 app.listen(3291, function () {
     console.log(__dirname)

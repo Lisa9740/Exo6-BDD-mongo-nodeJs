@@ -8,9 +8,10 @@ $.ajax({
 console.log(datas)
 
  for (var  i = 0 ; i < datas.length; i++){
-
+    $("#donnee").append( "<p class='lead'> id: "+datas[i]._id+"</p>" )
     $("#donnee").append( "<p class='lead'> Prénom : "+datas[i].name+" </p>" )
-    $("#donnee").append( "<p class='lead'> Genre: "+datas[i].genre+"</p>" )
+    $("#donnee").append( "<p class='lead'> Genre: "+datas[i].genre+"</p> <hr>" )
+  
 
  }  
 
@@ -34,3 +35,20 @@ $('#submit').click(function(){
 
     });
 });
+
+$(function () {
+    $('#submitmodif').click(function(){
+        var name = $('#prenom2').val();
+    
+        var modifname = $('#prenommodif').val();
+      
+        var url='http://localhost:3291/personne';
+    
+         $.post(url, { name: name ,modifname: modifname}, function(data){
+    
+    //   $("#rajout").append("<p class='display-3'> Addition :" + prenom + "</p>");
+    //    console.log(prenom)
+         });
+    
+        });
+    });
