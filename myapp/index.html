@@ -5,26 +5,29 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header class="bg-dark text-white text-center p-5">    <h1> Mongo DB</h1> </header>
-   <div class="container border border-dark mt-5">
-     <h2> Affichage des données de la base de donnée 'alison' avec MongoDB</h2>
+   <div class="container border border-dark mt-5 p-5">
+     <h2 class="mb-3 color-red text-center"> Affichage des données de la base de donnée 'alison' </h2>
       <div id="donnee"></div>
     </div>
 
     <div class="container mx-auto mt-3">
-      <form> 
-        <input type="text" class="form-control" id="prenom" placeholder="entrez votre nom">
+      <form class="p-5"> 
+      
+        <input type="text" class="form-control mb-3" id="prenom" placeholder="entrez votre nom">
+ 
         <input type="text" class="form-control" id="genre" placeholder="entrez votre genre">
-        <button class="btn btn-primary" id="submit"> Submit </button>
+        <button class="btn btn-primary mt-3" id="submit"> Submit </button>
       </form>
      
 <div id="rajout"></div>
-<a href="http://localhost:3291/modifier"> <button class="btn btn-danger mt-3"> Modifier BDD</button></a>
+<a href="http://localhost:5993/modifier"> <button class="btn btn-danger mt-3"> Modifier BDD</button></a>
     </div>
   
     <!-- Optional JavaScript -->
