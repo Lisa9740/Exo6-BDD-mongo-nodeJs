@@ -10,7 +10,9 @@ $.ajax({
 
             $("#editiondonnee").append("<p class='lead'> id: " + datas[i]._id + "</p><p class='lead'> Prénom : " + datas[i].name + " </p><p class='lead'> Genre: " + datas[i].genre + "</p> </div>  <hr>")
 
-            $(".prenom2").append("<option value='"+ datas[i].name + "'>"+ datas[i].name +"  genre : "+ datas[i].genre +"</option>")
+            $("#prenomsupprime").append("<option value='"+ datas[i].name + "'>"+ datas[i].name +"  genre : "+ datas[i].genre +"</option>")
+
+            $(".prenom2").append("<option value='"+ datas[i].name + "'>"+ datas[i].name +"</option>")
 
 
         }
@@ -26,7 +28,7 @@ $(function () {
         var genre = $('#genre').val();
         var url = 'http://localhost:5993/addition';
 
-        $.post(url, { name: name, genre: genre }, function (data) {
+        $.post(url, { name: name,genre:genre }, function (data) {
 
 
 
@@ -37,15 +39,16 @@ $(function () {
 $(function () {
     $('#delete').click(function () {
 
-      var name = $('.prenom').val();
+      var name = $('#prenomsupprime').val();
         var genre = $('#genre').val();
         var url = 'http://localhost:5993/delete';
-
+console.log(name)
         $.post(url, { name: name, genre: genre }, function (data) {
 
-
-
+       
         });
+        alert('Le prénom '+name+'a bien été supprimé de la base de donnée. Veuillez actualisez la page ')
+
     })
 });
 

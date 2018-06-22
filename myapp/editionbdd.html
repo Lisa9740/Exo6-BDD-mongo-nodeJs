@@ -17,7 +17,7 @@
      <h2 class="mb-3 color-red text-center"> Modification des données de la base de donnée 'alison' </h2>
       <div id="editiondonnee">
 
-      <!-- </div> -->
+     </div> 
       <button class='btn btn-primary mt-3' data-toggle="modal" data-target="#exampleModal"> Supprimer un prénom </button>
       
     </div>
@@ -28,7 +28,7 @@
         <select class="form-control mb-3 prenom2">
        
          </select>
-         <label for="exampleFormControlInput1"> Entrez la modification </label>
+         <label for="exampleFormControlInput1"> Entrez le nouveau prénom </label>
         <input type="text" class="form-control"  placeholder="entrez la modification" id="prenommodif">
         
         <button class="btn btn-success mt-3" id="submitmodif"> Appliquer la modification </button>
@@ -49,7 +49,7 @@
         </div>
         <div class="modal-body">
             <label>  Sélectionner le prénom à supprimer </label>
-            <select class="form-control mb-3 prenom2">
+            <select class="form-control mb-3" id="prenomsupprime">
        
               </select>
         </div>

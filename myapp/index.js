@@ -98,34 +98,34 @@ app.post('/addition', function(req, res) {
   
 })
 
-// app.post('/delete', function(req, res) {
-//     var name = req.body.name; 
-//     var genre = req.body.genre;
-//     console.log(name) 
+app.post('/delete', function(req, res) {
+    var name = req.body.name; 
+    var genre = req.body.genre;
+    console.log(name) 
 
     
-//     MongoClient.connect("mongodb://127.0.0.1:27017/alison", function (error, db) {
-//         if (error) {
-//             throw error;
+    MongoClient.connect("mongodb://127.0.0.1:27017/alison", function (error, db) {
+        if (error) {
+            throw error;
 
-//         } else {
-//             console.log("Connecté à la base de données 'alison'");
-//             var dbo = db.db("alison");
+        } else {
+            console.log("Connecté à la base de données 'alison'");
+            var dbo = db.db("alison");
 
-//            dbo.collection("personnages").remove({name : name, genre : genre}),function (err, result) {
-//                if (err) throw err;           
+           dbo.collection("personnages").deleteOne({name : name}),function (err, result) {
+               if (err) throw err;           
          
          
-//              res.send(result);
+             res.send(result);
          
-//                 db.close();
+                db.close();
            
-//             }
+            }
     
-//     }
-// });
+    }
+});
   
-// })
+})
   
 // 
 app.post('/personne/1', function(req, res) {
